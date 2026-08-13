@@ -92,10 +92,11 @@ export default function Home() {
   },[events,batteryGwh,medical,filtration]);
 
   return <main>
-    <header className="topbar"><a className="brand" href="#top"><span className="brand-mark">W</span><span>WEATHER MODEL</span></a><div className="status"><span className="status-dot"/>Illustrative scenario engine</div></header>
-    <section className="hero" id="top"><div><p className="eyebrow">GLOBAL HAZARD × INFRASTRUCTURE SIMULATOR</p><h1>Put a disaster<br/>anywhere on Earth.</h1></div><p className="hero-copy">Explore how hazards could cascade through people, power, health, batteries, and economies. Select an event, then click the map to place it.</p></section>
+    <header className="topbar"><a className="brand" href="#top"><span className="brand-mark">WM</span><span>WEATHER MODEL<small>RISK INTELLIGENCE</small></span></a><nav aria-label="Product navigation"><a href="#simulator">Scenario lab</a><a href="#brief">Risk brief</a><a href="#method">Method</a></nav><div className="status"><span className="status-dot"/>Model online · illustrative</div></header>
+    <section className="newsline" aria-label="Product notice"><b>WEATHER DESK</b><span>Translate hazard scenarios into clear exposure, resilience, and recovery signals.</span><em>Powered by Magic2U</em></section>
+    <section className="hero" id="top"><div><p className="eyebrow">CLIMATE RISK × RESILIENCE INTELLIGENCE</p><h1>See the risk.<br/><span>Test the response.</span></h1></div><div><p className="hero-copy">Build transparent hazard scenarios for portfolio conversations, resilience planning, and executive briefings—without presenting illustrative outputs as forecasts or insurance estimates.</p><a className="hero-action" href="#simulator">Build a scenario →</a></div></section>
 
-    <section className="simulator">
+    <section className="simulator" id="simulator">
       <aside className="toolbox">
         <div className="step"><span>01</span><div><b>CHOOSE A HAZARD</b><small>Natural and environmental events</small></div></div>
         <div className="hazard-grid">{hazards.map(h=><button key={h.id} className={hazardId===h.id?"active":""} style={{"--hazard":h.color} as React.CSSProperties} onClick={()=>setHazardId(h.id)}><i>{h.code}</i><span><b>{h.name}</b><small>{h.category}</small></span></button>)}</div>
@@ -116,6 +117,17 @@ export default function Home() {
         </div>
         <div className="event-strip">{events.length?events.map(e=>{const h=hazards.find(x=>x.id===e.hazardId)!;return <div key={e.id}><i style={{background:h.color}}/><span><b>{h.name}</b><small>{e.place} · intensity {e.intensity}</small></span></div>}):<p>No events placed. Choose a hazard and click the map.</p>}</div>
       </div>
+    </section>
+
+    <section className="risk-brief" id="brief">
+      <div className="brief-lead"><p className="eyebrow">PORTFOLIO RISK BRIEF</p><h2>Decision-ready context,<br/>with uncertainty intact.</h2><p>Use scenario comparisons to frame questions about exposure concentration, infrastructure dependency, business interruption, and recovery planning.</p></div>
+      <div className="brief-grid">
+        <article><span>01</span><b>Exposure</b><p>Where people, operations, and infrastructure intersect with modeled hazards.</p></article>
+        <article><span>02</span><b>Interruption</b><p>How power stress, displacement, and degraded air could compound operational disruption.</p></article>
+        <article><span>03</span><b>Resilience</b><p>How storage, medical readiness, and filtration change comparative outcomes.</p></article>
+        <article><span>04</span><b>Recovery</b><p>A transparent proxy for discussing restoration priorities and continuity planning.</p></article>
+      </div>
+      <aside className="partner-card" aria-label="Partner content placeholder"><small>PARTNER CONTENT</small><strong>Your resilience insight here.</strong><p>Reserved for an authorized insurer, risk consultancy, infrastructure provider, or workforce partner.</p><button type="button">Explore partnership</button></aside>
     </section>
 
     <section className="resilience">
@@ -143,7 +155,8 @@ export default function Home() {
       </div>
     </section>
 
-    <section className="method"><div><p className="eyebrow">SAFE BY DESIGN</p><h2>A simulator for questions,<br/>not authoritative answers.</h2></div><div><p>Weather Model helps people understand cascading risk and resilience tradeoffs. Its coefficients are illustrative and deliberately transparent. It must not be used for evacuation, medical, emergency-management, investment, insurance, or utility-operating decisions.</p><p>Production evolution: calibrate hazards with NOAA, NASA, Copernicus, USGS and WMO data; infrastructure with EIA and OpenStreetMap; population with WorldPop; and losses with peer-reviewed regional vulnerability functions.</p><a href="#top">Reset your thinking ↑</a></div></section>
-    <footer><span>WEATHER MODEL / SIMULATOR PROTOTYPE</span><span>Map: Wikimedia Commons · CC0 / public domain</span></footer>
+    <section className="method" id="method"><div><p className="eyebrow">SAFE BY DESIGN</p><h2>A simulator for questions,<br/>not authoritative answers.</h2></div><div><p>Weather Model helps people understand cascading risk and resilience tradeoffs. Its coefficients are illustrative and deliberately transparent. It must not be used for evacuation, medical, emergency-management, investment, underwriting, pricing, claims, or utility-operating decisions.</p><p>Production evolution: calibrate hazards with NOAA, NASA, Copernicus, USGS and WMO data; infrastructure with EIA and OpenStreetMap; population with WorldPop; and losses with peer-reviewed regional vulnerability functions.</p><a href="#top">Return to the weather desk ↑</a></div></section>
+    <section className="magic-case"><span>MAGIC2U CASE STUDY 01</span><p>Weather Model consumes a product theme built from Magic2U semantic tokens: surfaces, text, actions, alerts, borders, spacing, radius, and elevation. The weather brand stays distinct while its interface remains governable.</p><a href="https://magic2u.org">View the design-system platform →</a></section>
+    <footer><span>WEATHER MODEL / ILLUSTRATIVE RISK INTELLIGENCE</span><span>Map: Wikimedia Commons · CC0 / public domain</span></footer>
   </main>;
 }

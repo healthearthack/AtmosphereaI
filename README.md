@@ -1,5 +1,7 @@
 # Weather Model
 
+> **Magic2U case study 01:** Weather Model is the first product-brand implementation of the [Magic2U design-system platform](https://magic2u.org). It uses a shared semantic token contract while retaining its own weather-risk identity.
+
 An interactive global hazard and resilience simulator. Select a natural or
 environmental hazard, place it anywhere on the world map, combine multiple
 events, and explore modeled impacts on people, power systems, health,
@@ -8,6 +10,39 @@ batteries, displacement, air quality, economic activity, and recovery.
 > **Important:** Weather Model is an educational scenario sandbox. Its outputs
 > are illustrative comparisons—not forecasts, emergency guidance, casualty
 > predictions, engineering studies, insurance estimates, or investment advice.
+
+## Brand and product positioning
+
+Weather Model is positioned as **illustrative climate-risk intelligence** for portfolio conversations, resilience planning, and executive education. Its visual direction draws on the urgency and hierarchy of an editorial weather desk while remaining original to Weather Model.
+
+- Deep navy communicates institutional trust and analytical depth.
+- Data cyan identifies models, resilience, and positive action.
+- Alert coral marks editorial urgency and primary actions.
+- Paper-white surfaces keep dense scenario information readable.
+- Short risk-language modules make outputs useful to insurance and resilience audiences without implying underwriting validity.
+
+The partner-content card is intentionally brand-neutral. An insurer, consulting firm, infrastructure provider, or workforce partner may supply an authorized name and logo later. No third-party endorsement is implied.
+
+## How Weather Model uses Magic2U
+
+Magic2U provides the semantic roles; Weather Model supplies the product-specific foundation values.
+
+| Magic2U layer | Weather Model implementation |
+| --- | --- |
+| Foundation | Navy, cyan, coral, sand, spacing, radii, and elevation values |
+| Semantic | Page, panel, inverse, primary text, secondary text, action, alert, and border roles |
+| Components | Weather desk, scenario controls, metric cards, risk brief, partner card, and case-study panel |
+| Output | Responsive web application |
+
+The token source is [`app/weather-model.tokens.css`](app/weather-model.tokens.css). The product theme is [`app/weather-model.theme.css`](app/weather-model.theme.css). Components consume semantic variables instead of inventing independent values, so future Magic2U governance can update the product without erasing its brand.
+
+```text
+Magic2U semantic contract
+          ↓
+Weather Model foundation theme
+          ↓
+Scenario lab · risk brief · partner content · metrics
+```
 
 ## What you can simulate
 

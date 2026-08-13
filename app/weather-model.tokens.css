@@ -1,0 +1,38 @@
+/**
+ * Weather Model theme — generated as a Magic2U consumer layer.
+ * Foundation values remain product-specific; semantic roles match Magic2U.
+ */
+:root {
+  --wm-color-navy-950: #071523;
+  --wm-color-navy-900: #0b2033;
+  --wm-color-navy-800: #12344f;
+  --wm-color-sky-500: #19b5e5;
+  --wm-color-coral-500: #ff5f46;
+  --wm-color-sand-50: #f7f5ef;
+  --wm-color-white: #ffffff;
+  --wm-color-ink: #0a1a28;
+  --wm-color-muted: #60717d;
+  --wm-color-line: #c8d2d8;
+  --wm-color-success: #19a974;
+
+  --wm-surface-page: var(--wm-color-sand-50);
+  --wm-surface-panel: var(--wm-color-white);
+  --wm-surface-inverse: var(--wm-color-navy-950);
+  --wm-text-primary: var(--wm-color-ink);
+  --wm-text-secondary: var(--wm-color-muted);
+  --wm-text-inverse: var(--wm-color-white);
+  --wm-action-primary: var(--wm-color-sky-500);
+  --wm-action-alert: var(--wm-color-coral-500);
+  --wm-border-default: var(--wm-color-line);
+
+  --wm-radius-sm: 6px;
+  --wm-radius-md: 12px;
+  --wm-radius-lg: 20px;
+  --wm-shadow-card: 0 14px 40px rgba(7, 21, 35, .09);
+  --wm-space-1: .25rem;
+  --wm-space-2: .5rem;
+  --wm-space-3: .75rem;
+  --wm-space-4: 1rem;
+  --wm-space-6: 1.5rem;
+  --wm-space-8: 2rem;
+}
